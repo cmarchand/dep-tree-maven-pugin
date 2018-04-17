@@ -8,7 +8,7 @@
 
     <groupId>top.marchand.maven</groupId>
     <artifactId>dep-tree-maven-plugin</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>maven-plugin</packaging>
 
 
@@ -20,8 +20,8 @@
 
     <licenses>
         <license>
-            <name>The BSD 3-Clause License</name>
-            <url>http://opensource.org/licenses/BSD-3-Clause</url>
+            <name>Apache License, version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
