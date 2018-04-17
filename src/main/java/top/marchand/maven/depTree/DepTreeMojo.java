@@ -104,7 +104,7 @@ public class DepTreeMojo extends AbstractMojo {
      * If specified, this parameter will cause the dependency tree to be written to the path specified, instead of
      * writing to the console.
      */
-    @Parameter( property = "outputFile", defaultValue = "$project.build.directory}/dependency-tree-${project.version}.txt", readonly = true )
+    @Parameter( property = "outputFile", defaultValue = "${project.build.directory}/dependency-tree-${project.version}.txt", readonly = true )
     private File outputFile;
     
     @Parameter( property = "outputType", defaultValue = "text", readonly = true )
@@ -229,7 +229,7 @@ public class DepTreeMojo extends AbstractMojo {
             rootNode = dependencyGraphBuilder.buildDependencyGraph( buildingRequest, artifactFilter, reactorProjects );
 
             dependencyTreeString = serializeDependencyTree( rootNode );
-
+            getLog().info("writing dependency tree to "+outputFile.getAbsolutePath());
             DependencyUtil.write( dependencyTreeString, outputFile, this.appendOutput, getLog() );
             projectHelper.attachArtifact(project, "txt", "tree", outputFile);
         } catch ( DependencyGraphBuilderException exception ) {
