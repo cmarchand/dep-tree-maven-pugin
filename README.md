@@ -1,4 +1,4 @@
-** dep-tree-maven-plugin **
+##dep-tree-maven-plugin##
 
 This plugin generates a text file that contains de dependency-tree, and declares it as an artifact. Hence, when a `mvn deploy` is run, this text file is also deployed.
 
